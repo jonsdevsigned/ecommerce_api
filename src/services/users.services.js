@@ -20,17 +20,6 @@ class UserServices {
 			throw error
 		}
 	}
-
-	static async getProducts() {
-		try {
-			const result = await ProductInCart.findAll({
-				where: { cart_id }
-			})
-			return result
-		} catch (error) {
-			throw error
-		}
-	}
 }
 
 module.exports = UserServices

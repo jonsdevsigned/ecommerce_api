@@ -155,30 +155,7 @@ const productInOrders = [
 	}
 ]
 
-/* db.sync({ force: false })
-	.then(() => {
-		console.log('starting seeders')
-	})
-	.then(() => {
-		users.forEach((user) => Users.create(user))
-	})
-	.then(() => {
-		products.forEach((products) => Products.create(products))
-	})
-	.then(() => {
-		carts.forEach((cart) => Carts.create(cart))
-	})
-	.then(() => {
-		orders.forEach((order) => Orders.create(order))
-	})
-	.then(() => {
-		productInCarts.forEach((prodInCart) => ProductInCart.create(prodInCart))
-	})
-	.then(() => {
-		productInOrders.forEach((prodInOrder) => ProductInOrder.create(prodInOrder))
-	}) */
-
-db.sync({ force: true }).then(() => {
+db.sync({ force: false }).then(() => {
 	console.log('synchronized')
 	users.forEach(async (user) => await Users.create(user))
 	setTimeout(() => {
